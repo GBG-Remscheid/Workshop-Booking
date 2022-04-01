@@ -18,3 +18,17 @@ Create Table Lehrer(
   ID INT Auto_Increment,
   Primary Key (ID)
 );
+
+-- Erstelle die Tabelle für die Workshops
+
+Create Table Kurse(
+  Bezeichnung VARCHAR(150),
+  Beschreibung VARCHAR(2000),
+  ZeitVon TIME,
+  ZeitBis TIME,
+  KlasseVon INT,
+  KlasseBis INT,
+  Teilnehmeranzahl INT,
+  ID INT Auto_Increment,
+  Primary Key (ID)
+)
