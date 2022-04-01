@@ -5,7 +5,7 @@ Create Table Schueler (
   Nachname VARCHAR(40),
   Klasse INT,
   Passworthash VARCHAR(40),
-  ID INT Auto_Increment,
+  ID INT AUTO_INCREMENT,
   Primary Key (ID)
 );
 
@@ -15,7 +15,7 @@ Create Table Lehrer(
   Geschlecht Boolean,
   Nachname VARCHAR(40),
   Passworthash VARCHAR(40),
-  ID INT Auto_Increment,
+  ID INT AUTO_INCREMENT,
   Primary Key (ID)
 );
 
@@ -29,16 +29,19 @@ Create Table Kurse(
   KlasseVon INT,
   KlasseBis INT,
   Teilnehmeranzahl INT,
-  ID INT Auto_Increment,
+  ID INT AUTO_INCREMENT,
   LehrerID INT,
   Primary Key (ID),
   FOREIGN KEY (LehrerID) REFERENCES Lehrer(ID)
-)
+);
 
---SchülerBesuchtKurs
+-- SchülerBesuchtKurs
 
 Create Table SchuelerBesuchtKurs(
-  ID INT Auto_Increment PRIMARY KEY,
-  SchuelerID INT FOREIGN KEY REFERENCES Schueler(ID),
-  KursID INT FOREIGN KEY REFERENCES Kurse(ID)
-)
+  SchuelerID INT,
+  KursID INT,
+  ID INT AUTO_INCREMENT,
+  FOREIGN KEY (KursID) REFERENCES Kurse(ID),
+  FOREIGN KEY (SchuelerID) REFERENCES Schueler(ID),
+  PRIMARY KEY (ID)
+);
