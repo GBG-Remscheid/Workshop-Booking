@@ -8,3 +8,13 @@ Create Table Schueler (
   ID INT Auto_Increment,
   Primary Key (ID)
 );
+
+-- Erstelle die Tabelle für Lehreraccounts
+
+Create Table Lehrer(
+  Geschlecht Boolean,
+  Nachname VARCHAR(40),
+  Passworthash VARCHAR(40),
+  ID INT Auto_Increment,
+  Primary Key (ID)
+);
