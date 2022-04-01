@@ -1,0 +1,15 @@
+.Banana {
+  background-color: lightblue;
+  height: 50%;
+  text-align: center;
+}
+
+.Enter {
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+}
+
+.Enter:hover { 
+  background-color: yellow;
+}
