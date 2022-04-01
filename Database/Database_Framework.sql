@@ -1,3 +1,5 @@
+-- Erstelle die Tabelle Schüler
+
 Create Table Schueler (
   Vorname VARCHAR(40),
   Nachname VARCHAR(40),
