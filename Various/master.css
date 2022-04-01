@@ -1,0 +1,15 @@
+.Soon {
+  font-weight: bolder;
+  font-size: 100px;
+  width: inherit;
+  height: inherit;
+  color: white;
+  margin-left: 40%;
+  margin-right: 50%;
+  margin-top: 48%;
+  margin-bottom: 50%;
+}
+
+body {
+  background-color: darkgray;
+}
