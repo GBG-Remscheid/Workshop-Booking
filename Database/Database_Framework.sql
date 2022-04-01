@@ -30,5 +30,15 @@ Create Table Kurse(
   KlasseBis INT,
   Teilnehmeranzahl INT,
   ID INT Auto_Increment,
-  Primary Key (ID)
+  LehrerID INT,
+  Primary Key (ID),
+  FOREIGN KEY (LehrerID) REFERENCES Lehrer(ID)
+)
+
+--SchülerBesuchtKurs
+
+Create Table SchuelerBesuchtKurs(
+  ID INT Auto_Increment PRIMARY KEY,
+  SchuelerID INT FOREIGN KEY REFERENCES Schueler(ID),
+  KursID INT FOREIGN KEY REFERENCES Kurse(ID)
 )
